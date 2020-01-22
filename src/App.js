@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   const navi = navigator.userAgent;
-  var UIAB = typeof UnityInAppBrowser === 'object' ? UnityInAppBrowser : { sendMessageFromJS: (message) => {console.log(`The message is: ${message}`)}, failed: 'yes 2'};
+  var UIAB = typeof UnityInAppBrowser === 'object' ? window.UnityInAppBrowser : { sendMessageFromJS: (message) => {console.log(`The message is: ${message}`)}, failed: 'yes 2'};
   UIAB.sendMessageFromJS('ping')
   console.log(UIAB);
   return (
@@ -26,7 +26,7 @@ function App() {
           Learn React
         </a>
         <p>Title: {document.title}</p>
-  {Object.keys(UnityInAppBrowser).map(i => <p>{i}</p>)}
+  {Object.keys(UIAB).map(i => <p>{i}</p>)}
       </header>
     </div>
   );
