@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const navi = navigator.userAgent;
+  const is1 = Boolean(localStorage);
   return (
     <div className="App">
       <header className="App-header">
@@ -10,6 +12,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <p>{navi}</p>
+
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -18,6 +22,7 @@ function App() {
         >
           Learn React
         </a>
+        {is1 && <p>1</p>}
       </header>
     </div>
   );
