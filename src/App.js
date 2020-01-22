@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-var UnityInAppBrowser = typeof UnityInAppBrowser === 'object' ? UnityInAppBrowser : { sendMessageFromJS: (message) => {console.log(`The message is: ${message}`)}};
+var UnityInAppBrowser = typeof UnityInAppBrowser === 'object' ? UnityInAppBrowser : { sendMessageFromJS: (message) => {console.log(`The message is: ${message}`)}, failed: 'yes'};
 
 function App() {
   const navi = navigator.userAgent;
