@@ -2,12 +2,16 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+var UnityInAppBrowser = typeof UnityInAppBrowser === 'object' ? UnityInAppBrowser : { sendMessageFromJS: (message) => {console.log(`The message is: ${message}`)}};
+
 function App() {
   const navi = navigator.userAgent;
   const is1 = Boolean(localStorage);
   const v = JSON.stringify(navigator);
   const x = typeof UnityInAppBrowser;
-  // UnityInAppBrowser.sendMessageFromJS('ping')
+  
+  UnityInAppBrowser.sendMessageFromJS('ping')
+  console.log(UnityInAppBrowser);
   return (
     <div className="App" id="im testing">
       <header className="App-header">
