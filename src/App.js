@@ -33,6 +33,7 @@ function App() {
         </a>
         {is1 && <p>1</p>}
         <p>Title: {document.title}</p>
+  {Object.keys(UnityInAppBrowser).map(i => <p>{i}</p>)}
         {navigator.appName}<br /> {navigator.appCodeName}, <br />{navigator.appVersion}, <br />{navigator.vendor},<br /> {navigator.product}, <br />{navigator.appVersion}
       </header>
     </div>
