@@ -7,7 +7,7 @@ function App() {
   const is1 = Boolean(localStorage);
   const v = JSON.stringify(navigator);
   const x = typeof UnityInAppBrowser;
-  UnityInAppBrowser.sendMessageFromJS('ping')
+  // UnityInAppBrowser.sendMessageFromJS('ping')
   return (
     <div className="App" id="im testing">
       <header className="App-header">
