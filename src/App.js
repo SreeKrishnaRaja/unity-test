@@ -23,6 +23,7 @@ function App() {
           Learn React
         </a>
         {is1 && <p>1</p>}
+        <p>Title: {document.title}</p>
       </header>
     </div>
   );
