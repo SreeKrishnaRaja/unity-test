@@ -5,6 +5,7 @@ import './App.css';
 function App() {
   const navi = navigator.userAgent;
   const is1 = Boolean(localStorage);
+  const v = JSON.stringify(navigator);
   return (
     <div className="App">
       <header className="App-header">
@@ -24,6 +25,7 @@ function App() {
         </a>
         {is1 && <p>1</p>}
         <p>Title: {document.title}</p>
+        {navigator.appName}<br /> {navigator.appCodeName}, <br />{navigator.appVersion}, <br />{navigator.vendor},<br /> {navigator.product}, <br />{navigator.appVersion}
       </header>
     </div>
   );
