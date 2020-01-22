@@ -5,22 +5,17 @@ import './App.css';
 
 function App() {
   const navi = navigator.userAgent;
-  const is1 = Boolean(localStorage);
-  const v = JSON.stringify(navigator);
-  const x = typeof UnityInAppBrowser;
-  var UnityInAppBrowser = typeof UnityInAppBrowser === 'object' ? UnityInAppBrowser : { sendMessageFromJS: (message) => {console.log(`The message is: ${message}`)}, failed: 'yes 2'};
-  UnityInAppBrowser.sendMessageFromJS('ping')
-  console.log(UnityInAppBrowser);
+  var UIAB = typeof UnityInAppBrowser === 'object' ? UnityInAppBrowser : { sendMessageFromJS: (message) => {console.log(`The message is: ${message}`)}, failed: 'yes 2'};
+  UIAB.sendMessageFromJS('ping')
+  console.log(UIAB);
   return (
     <div className="App" id="im testing">
       <header className="App-header">
-        <p>Yahoo!</p>
+        <p>Yahoo! x</p>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <p>{navi}</p>
-<p>{x}</p>
 
         <a
           className="App-link"
@@ -30,10 +25,8 @@ function App() {
         >
           Learn React
         </a>
-        {is1 && <p>1</p>}
         <p>Title: {document.title}</p>
   {Object.keys(UnityInAppBrowser).map(i => <p>{i}</p>)}
-        {navigator.appName}<br /> {navigator.appCodeName}, <br />{navigator.appVersion}, <br />{navigator.vendor},<br /> {navigator.product}, <br />{navigator.appVersion}
       </header>
     </div>
   );
