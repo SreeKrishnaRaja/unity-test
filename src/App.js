@@ -9,8 +9,9 @@ function App() {
   const x = typeof UnityInAppBrowser;
   UnityInAppBrowser.sendMessageFromJS('ping')
   return (
-    <div className="App">
+    <div className="App" id="im testing">
       <header className="App-header">
+        <p>Yahoo!</p>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
