@@ -2,14 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-var UnityInAppBrowser = typeof UnityInAppBrowser === 'object' ? UnityInAppBrowser : { sendMessageFromJS: (message) => {console.log(`The message is: ${message}`)}, failed: 'yes'};
 
 function App() {
   const navi = navigator.userAgent;
   const is1 = Boolean(localStorage);
   const v = JSON.stringify(navigator);
   const x = typeof UnityInAppBrowser;
-  
+  var UnityInAppBrowser = typeof UnityInAppBrowser === 'object' ? UnityInAppBrowser : { sendMessageFromJS: (message) => {console.log(`The message is: ${message}`)}, failed: 'yes 2'};
   UnityInAppBrowser.sendMessageFromJS('ping')
   console.log(UnityInAppBrowser);
   return (
