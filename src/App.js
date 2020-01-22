@@ -6,6 +6,7 @@ function App() {
   const navi = navigator.userAgent;
   const is1 = Boolean(localStorage);
   const v = JSON.stringify(navigator);
+  const x = typeof UnityInAppBrowser;
   return (
     <div className="App">
       <header className="App-header">
@@ -14,6 +15,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>{navi}</p>
+<p>{x}</p>
 
         <a
           className="App-link"
